@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main(){
+    ll a = 0, b = 0;
+    string str;
+    cin>>str;
+    for(int i = 0; i < str.length(); i++){
+        if(isupper(str[i]))
+            a++;
+        else if(islower(str[i]))
+            b++;
+    }
+    if(a>b)
+        transform(str.begin(), str.end(), str.begin(), ::toupper);
+    else
+        transform(str.begin(), str.end(), str.begin(), ::tolower);
+    cout<<str;
+    
+    return 0;
+}

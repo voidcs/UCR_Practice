@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main(){
+    string str;
+    cin>>str;
+    
+    ll a = 0;
+    for(int i = 0; i < str.length(); i++){
+        if(str[i] == '4' || str[i] == '7')
+            a++;
+    }
+    string check = to_string(a);
+    ll count = 0;
+    for(int i = 0; i < check.length(); i++){
+        if(check[i] == '7' || check[i] == '4')
+            count++;
+    }
+    if(count == check.length())
+        cout<<"YES\n";
+    else
+        cout<<"NO\n";
+    return 0;
+}
